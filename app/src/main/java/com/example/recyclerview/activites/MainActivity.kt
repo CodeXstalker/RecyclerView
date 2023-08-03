@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerview.ModalClass
 import com.example.recyclerview.R
 import com.example.recyclerview.adapter.MyAdapter
 
@@ -17,29 +18,52 @@ class MainActivity : AppCompatActivity() {
 
         contactList.layoutManager = LinearLayoutManager(this)
 
-        val contacts = listOf(
-            "wrwer",
-            "sfsdfs",
-            "sfafsdfsdf",
-            "234324",
-            "wrwer",
-            "sfsdfs",
-            "sfafsdfsdf",
-            "234324",
-            "wrwer",
-            "sfsdfs",
-            "sfafsdfsdf",
-            "234324",
-            "wrwer",
-            "sfsdfs",
-            "sfafsdfsdf",
-            "234324",
-            "wrwer",
-            "sfsdfs",
-            "sfafsdfsdf",
-            "234324"
-        )
+        val modalClassObjects = mutableListOf<ModalClass>()
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
+        modalClassObjects.add(ModalClass("hello", "how are yout"))
 
-        contactList.adapter = MyAdapter(contacts)
+        contactList.adapter = MyAdapter(modalClassObjects)
     }
 }
