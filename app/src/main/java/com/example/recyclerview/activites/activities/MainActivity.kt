@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
+        /**
+         *  setting the layout of the layout manager of the  recycler view
+         */
+
+
         val linearLayoutManager = LinearLayoutManager(this)
         binding.ContactList.layoutManager = linearLayoutManager
 
@@ -161,9 +167,11 @@ class MainActivity : AppCompatActivity() {
             ContactModal("Charlotte Taylor", "A UX designer")
         )
 
+        /**
+         * setting adapter to the recycler view
+         */
+
         val adapter = ContactListAdapter(this, contactList)
         binding.ContactList.adapter = adapter
-
-
     }
 }
