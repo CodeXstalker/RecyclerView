@@ -3,32 +3,26 @@ package com.example.recyclerview.activites.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerview.activites.adapter.ContactListAdapter
-import com.example.recyclerview.activites.modalClass.ContactModal
+import com.example.recyclerview.activites.adapter.RecyclerViewAdapter
+import com.example.recyclerview.activities.modalClass.ContactModal
 import com.example.recyclerview.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var contactList: List<ContactModal>
+    private lateinit var contactList : List<ContactModal>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
+        binding.ContactList.layoutManager = LinearLayoutManager(this)
 
-        /**
-         *  setting the layout of the layout manager of the  recycler view
-         */
-
-
-        val linearLayoutManager = LinearLayoutManager(this)
-        binding.ContactList.layoutManager = linearLayoutManager
 
 
         contactList = listOf(
-            ContactModal("John Doe", "A software developer"),
+            ContactModal("Shivansh Kumar", "A software developer"),
             ContactModal("Jane Doe", "A designer"),
             ContactModal("Bob Smith", "An engineer"),
             ContactModal("Alice Johnson", "A project manager"),
@@ -167,11 +161,8 @@ class MainActivity : AppCompatActivity() {
             ContactModal("Charlotte Taylor", "A UX designer")
         )
 
-        /**
-         * setting adapter to the recycler view
-         */
-
-        val adapter = ContactListAdapter(this, contactList)
+        val adapter = RecyclerViewAdapter(this, contactList)
         binding.ContactList.adapter = adapter
+
     }
 }

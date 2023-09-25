@@ -1,13 +1,11 @@
-package com.example.recyclerview.activites.modalClass
+package com.example.recyclerview.activities.modalClass
 
- class ContactModal {
+class ContactModal {
+    var name: String? = null
+    var bio: String? = null
 
-    var name: String?=null
-    var bio: String?=null
-
-     constructor(name : String, bio : String){
-         this.name= name
-         this.bio = bio
-     }
-
+    constructor(name: String, bio: String) {
+        this.name = name
+        this.bio = bio
+    }
 }
